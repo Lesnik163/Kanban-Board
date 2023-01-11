@@ -1,0 +1,21 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #0079BF;
+    padding: 12px 10px;
+}
+.main-cards{
+    display: flex;
+    flex-direction: column;
+    background-color: #EBECF0;
+    mix-blend-mode: normal;
+    border-radius: 10px;
+    width: 21.5%;
+    padding: 0px 6px;
+}
+.main-header{
+    font-size: 18px;
+    line-height: 21px;
+    margin: 5px 0;
+}

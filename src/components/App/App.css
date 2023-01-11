@@ -1,0 +1,10 @@
+.wrapper{
+  margin:auto;
+  display:flex;
+  flex-direction: column;
+  width: 95%;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+}
+

@@ -1,0 +1,22 @@
+.fullSizeMain{
+    background-color: #0079BF;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.fullSizeMain-wrapper{
+    background-color: white;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+.fullSizeMain-container{
+    display:flex;
+    justify-content: space-between;  
+}
+.cross-button{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: none;
+    margin: 6px;
+    cursor: pointer;
+}
