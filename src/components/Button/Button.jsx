@@ -1,14 +1,15 @@
 import React from 'react';
-
 import './Button.css';
 
-const Button = ({showHidden, newName}) => {
+const Button = ({ name, ...rest }) => {
     return(
-        <>
             <button 
-            className='main-button'
-            onClick={() => showHidden() } ><img src='./logo/Plus.svg' alt='Plus'/>  {newName}</button>
-        </>
+                className='main-button'
+                {...rest}
+            >
+                <img src='./logo/Plus.svg' alt='Plus'/>
+                {name}
+            </button>
     )
 }
 export default Button;

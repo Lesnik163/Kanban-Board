@@ -1,7 +1,7 @@
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
-import FullSizePage from '../FullSizePage/FullSizePage';
+
 
 
 import './App.css';
@@ -12,7 +12,7 @@ function App() {
       <Header title="Awesome Kanban Board" />
       <Main />
       <Footer />
-      <FullSizePage />
+      
     </div>
   );
 }
