@@ -1,12 +1,10 @@
-import React, {useState} from 'react';
-import mockData from '../../mock-data/mock-data';
+import React from 'react';
 import CardItems from '../CardItems/CardItems'
 import ColumnBottom from '../ColumnBottom/ColumnBottom';
 
 import './Main.css'
-const Main = () => {
-    const [boardState, setBoardState] = useState(mockData)
-
+const Main = ({boardState, setBoardState}) => {
+    
     const createIssue = (name) => {
         if (!name) return
         setBoardState(boardState.map(column => ({
@@ -16,7 +14,7 @@ const Main = () => {
                 ...column.issues, {
                     id: crypto.randomUUID(),
                     name,
-                    description: 'Default card description'
+                    description: "This task has no description"
                     }
                 ]
             : column.issues

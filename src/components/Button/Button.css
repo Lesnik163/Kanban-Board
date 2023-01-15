@@ -13,3 +13,8 @@
 .main-button:hover{
     background-color: #bdc2cb;
 }
+.main-button:disabled{
+    cursor:auto;
+    background: transparent;
+    color: #c2c2c2;
+}
