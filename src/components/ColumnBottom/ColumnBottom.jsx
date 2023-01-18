@@ -1,14 +1,22 @@
-import React, {useState} from 'react';
-import Button from '../Button/Button'
+import React, {useState, useEffect} from 'react';
+import Button from '../Button/Button';
 
-const buttonNames = { add: 'Add card', submit: 'Submit' }
+import './ColumnBottom.css';
+
+const buttonNames = { add: 'Add card', submit: 'Submit' };
 const buttonClickTypes = { createIssue: 'CREATE_ISSUE', replaceIssue: 'REPLACE_ISSUE', showInput: 'SHOW_INPUT' }
 
 const ColumnBottom = ({ column, previousColumn, createIssue, replaceIssue}) => {
     const [buttonName, setButtonName] = useState('Add card')
     const [issueNameValue, setIssueNameValue] = useState('')
     const isBacklog = column.title === 'Backlog'
-    const [selectedIssue, setSelectedIssue] = useState(!isBacklog ? previousColumn.issues[0] : undefined)
+    const [selectedIssue, setSelectedIssue] = useState(!isBacklog ? previousColumn.issues[0] : undefined);
+
+    useEffect(() => {
+        if (!isBacklog) {
+            setSelectedIssue(previousColumn.issues[0])
+        }
+    }, [isBacklog, previousColumn.issues, selectedIssue]);
 
     const buttonClickType = buttonName === buttonNames.add
         ? buttonClickTypes.showInput
@@ -41,15 +49,13 @@ const ColumnBottom = ({ column, previousColumn, createIssue, replaceIssue}) => {
     const isInputComponentHidden = buttonName === buttonNames.add;
     const buttonDisabled = isInputComponentHidden && !isBacklog && !previousColumn.issues.length;
      
-    if(isBacklog) {
-        console.log(column.issues.length)  
-    }
     return(
         <>
             {isInputComponentHidden || (
                 isBacklog
                     ? (
-                        <input
+                        <input 
+                            className='columnbottom-input'
                             type='text'
                             onChange={e => setIssueNameValue(e.target.value)}
                         />

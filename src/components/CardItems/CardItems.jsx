@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import './CardItems.css';
 
 const CardItems = ({cardObj}) => {
@@ -8,7 +8,7 @@ const CardItems = ({cardObj}) => {
         <ul className='main-list'>
             {
                 cardInfoArr.map((obj) => { 
-                    return(<li key={obj.id} className='main-listItem'>{obj.name}</li>)      
+                    return(<Link to={`tasks/${obj.id}`} key={obj.id}><li  className='main-listItem'>{obj.name}</li></Link>)      
             })
             }  
         </ul>

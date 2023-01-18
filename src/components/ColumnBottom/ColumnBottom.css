@@ -1,0 +1,9 @@
+.columnbottom-input{
+    border: none;
+    border-radius: 2px;
+    padding: 5px 7px 1px 0px;
+    border-bottom: 1px solid rgb(41, 40, 39);
+    outline: 5px solid white;
+    width: 145px;
+    margin: 5px 0px 15px 5px;
+}

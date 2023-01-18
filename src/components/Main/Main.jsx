@@ -7,7 +7,7 @@ const Main = ({boardState, setBoardState}) => {
     
     const createIssue = (name) => {
         if (!name) return
-        setBoardState(boardState.map(column => ({
+        const newState = boardState.map(column => ({
           ...column, 
           issues: column.title === 'Backlog'
             ? [
@@ -19,18 +19,22 @@ const Main = ({boardState, setBoardState}) => {
                 ]
             : column.issues
             })
-        ))
+        )
+        setBoardState(newState)
+        localStorage.setItem('boardState', JSON.stringify(newState))
       }
       const replaceIssue = (currentColumnTitle, targetColumnTitle, issue) => {
         if (!issue) return
-        setBoardState(boardState.map(column => ({
+        const newState = boardState.map(column => ({
           ...column,
           issues: currentColumnTitle === column.title
             ? [...column.issues.filter(({ id }) => id !== issue.id)]
             : targetColumnTitle === column.title
               ? [...column.issues, issue]
               : [...column.issues]
-        })))
+        }))
+        setBoardState(newState)
+        localStorage.setItem('boardState', JSON.stringify(newState))
       }
 
     return(
