@@ -12,13 +12,13 @@ function App() {
   const localStorageData = localStorage.getItem('boardState');
   const initialState = localStorageData ? JSON.parse(localStorageData) : initialBoardState;
   const [boardState, setBoardState] = useState(initialState);
-  
+  const prefix = 'Kanban-Board';
   return (  
       <div className='wrapper'>
         <Header title="Awesome Kanban Board" />
         <Routes>
-          <Route path='/' element={<Main boardState={boardState} setBoardState=  {setBoardState} />} />
-          <Route path='tasks/:id' element={<DetailInformation boardState={boardState} />}/>
+          <Route path='Kanban-Board/' element={<Main boardState={boardState} setBoardState=  {setBoardState} />} />
+          <Route path='Kanban-Board/tasks/:id' element={<DetailInformation boardState={boardState} />}/>
         </Routes>
         <Footer 
         activeTasks={boardState[0].issues.length} 
