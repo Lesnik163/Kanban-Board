@@ -62,10 +62,11 @@ const ColumnBottom = ({ column, previousColumn, createIssue, replaceIssue}) => {
                     )
                     : (
                         <select 
+                            className='columnbottom-section'
                             onChange={e => setSelectedIssue(previousColumn.issues.find(({ id }) => id === e.target.value))}
                         >
                             {previousColumn.issues.map(issue => (
-                                <option key={issue.id} value={issue.id}>
+                                <option className='columnbottom-option' key={issue.id} value={issue.id}>
                                     {issue.name}
                                 </option>
                             ))}
