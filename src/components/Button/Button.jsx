@@ -7,7 +7,7 @@ const Button = ({ name, ...rest }) => {
                 className='main-button'
                 {...rest}
             >
-                <img src='./logo/Plus.svg' alt='Plus'/>
+                <img src='../Kanban-Board/logo/Plus.svg' alt='Plus'/>
                 {name}
             </button>
     )

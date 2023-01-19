@@ -12,7 +12,6 @@ function App() {
   const localStorageData = localStorage.getItem('boardState');
   const initialState = localStorageData ? JSON.parse(localStorageData) : initialBoardState;
   const [boardState, setBoardState] = useState(initialState);
-  const prefix = 'Kanban-Board';
   return (  
       <div className='wrapper'>
         <Header title="Awesome Kanban Board" />

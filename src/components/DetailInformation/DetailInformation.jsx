@@ -6,7 +6,7 @@ import './DetailInformation.css'
 const DetailInformation = ({boardState}) => {
     const navigate = useNavigate();
     const handleClick = ()=> {
-        navigate('/');
+        navigate('/Kanban-Board');
     }
     let [description, setDescription] = useState('This task has no description')
     const changeDescription = (evt) => {
