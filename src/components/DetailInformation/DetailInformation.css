@@ -23,7 +23,7 @@
 .detail-information-section{
     width:60%;
     text-align: left;
-    cursor:url('../../../public/logo/free-icon-font-attribution-pencil-9291596.png'),auto;
+    cursor:url('../../logo/free-icon-font-attribution-pencil-9291596.png'),auto;
     padding: 10px;
     overflow-wrap: anywhere;
 }

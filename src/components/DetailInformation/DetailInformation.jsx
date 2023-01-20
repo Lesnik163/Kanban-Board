@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import crossIcon from "../../logo/crossForClosing.svg";
 
 import './DetailInformation.css'
 
@@ -23,7 +24,7 @@ const DetailInformation = ({boardState}) => {
             <div className='fullSizeMain-wrapper'>
                 <div className='fullSizeMain-container'>
                     <h2>{issue.name}</h2>
-                    <button className='cross-button' onClick={()=>handleClick()}><img src='../logo/crossForClosing.svg'  style={{scale:4}}alt='Plus'/></button>
+                    <button className='cross-button' onClick={()=>handleClick()}><img src={crossIcon}  style={{scale:4}}alt='Plus'/></button>
                 </div>            
                 <section 
                 className='detail-information-section'

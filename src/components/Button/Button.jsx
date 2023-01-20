@@ -1,5 +1,6 @@
 import React from 'react';
 import './Button.css';
+import plus from "../../logo/Plus.svg";
 
 const Button = ({ name, ...rest }) => {
     return(
@@ -7,7 +8,7 @@ const Button = ({ name, ...rest }) => {
                 className='main-button'
                 {...rest}
             >
-                <img src='../Kanban-Board/logo/Plus.svg' alt='Plus'/>
+                <img src={plus} alt='Plus'/>
                 {name}
             </button>
     )

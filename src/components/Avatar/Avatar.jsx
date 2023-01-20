@@ -1,4 +1,8 @@
 import React, {useState} from 'react';
+import userAvatar from "../../logo/user-avatar.svg";
+import arrowDawn from "../../logo/arrow-down.svg";
+import arrowUp from "../../logo/arrow-up.svg";
+import diamond from "../../logo/Diamond.svg";
 
 import './Avatar.css';
 
@@ -10,18 +14,18 @@ const Avatar = () => {
     return(
         <div className='avatar'>
             <img onClick={toggleDropDownList} 
-            src="../logo/user-avatar.svg"  
+            src={userAvatar} 
             className='avatar-img' alt="User" />
             <img onClick={toggleDropDownList} 
             className='arrow' 
-            src="../logo/arrow-down.svg" 
+            src={arrowDawn} 
             alt="arrow-down" hidden={!dropDownHidden}/>
             <img onClick={toggleDropDownList} 
-            src="../logo/arrow-up.svg" 
+            src={arrowUp} 
             alt="arrow-up" 
             className='arrow' hidden={dropDownHidden}/>
             <img  
-            src="../logo/Diamond.svg" 
+            src={diamond} 
             alt="Diamond" hidden={dropDownHidden}/>
             <ul className='avatar-list' hidden={dropDownHidden}>
                 <li ><a href='#'>{'Profile'}</a></li>
