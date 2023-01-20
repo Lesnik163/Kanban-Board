@@ -23,7 +23,7 @@ const DetailInformation = ({boardState}) => {
         <div className='fullSizeMain'>
             <div className='fullSizeMain-wrapper'>
                 <div className='fullSizeMain-container'>
-                    <h2>{issue.name}</h2>
+                    <h2 className='fullSizeMain-header'>{issue.name}</h2>
                     <button className='cross-button' onClick={()=>handleClick()}><img src={crossIcon}  style={{scale:4}}alt='Plus'/></button>
                 </div>            
                 <section 
