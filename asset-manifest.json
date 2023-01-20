@@ -1,13 +1,19 @@
 {
   "files": {
-    "main.css": "/Kanban-Board/static/css/main.378e9867.css",
-    "main.js": "/Kanban-Board/static/js/main.b670ff9f.js",
+    "main.css": "/Kanban-Board/static/css/main.0171c018.css",
+    "main.js": "/Kanban-Board/static/js/main.c46882cb.js",
+    "static/media/user-avatar.svg": "/Kanban-Board/static/media/user-avatar.8c75e22659ff0c8d0c51b327365a7432.svg",
     "index.html": "/Kanban-Board/index.html",
-    "main.378e9867.css.map": "/Kanban-Board/static/css/main.378e9867.css.map",
-    "main.b670ff9f.js.map": "/Kanban-Board/static/js/main.b670ff9f.js.map"
+    "static/media/arrow-up.svg": "/Kanban-Board/static/media/arrow-up.0bdd753114a7075f4da59e76fe30f326.svg",
+    "static/media/arrow-down.svg": "/Kanban-Board/static/media/arrow-down.499a81f7058420ec4c251b760054534d.svg",
+    "static/media/Plus.svg": "/Kanban-Board/static/media/Plus.d8fce16f935c6ec2b3e2a1f23c411e42.svg",
+    "static/media/crossForClosing.svg": "/Kanban-Board/static/media/crossForClosing.835a50775b444405ef280a6706fb0542.svg",
+    "static/media/Diamond.svg": "/Kanban-Board/static/media/Diamond.9b1e9463a0d58eecb054230cdf46c655.svg",
+    "main.0171c018.css.map": "/Kanban-Board/static/css/main.0171c018.css.map",
+    "main.c46882cb.js.map": "/Kanban-Board/static/js/main.c46882cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.378e9867.css",
-    "static/js/main.b670ff9f.js"
+    "static/css/main.0171c018.css",
+    "static/js/main.c46882cb.js"
   ]
 }
