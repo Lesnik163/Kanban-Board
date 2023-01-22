@@ -1,6 +1,7 @@
 import React from 'react';
 import CardItems from '../CardItems/CardItems'
 import ColumnBottom from '../ColumnBottom/ColumnBottom';
+import uuid from 'react-uuid';
 
 import './Main.css'
 const Main = ({boardState, setBoardState}) => {
@@ -12,7 +13,7 @@ const Main = ({boardState, setBoardState}) => {
           issues: column.title === 'Backlog'
             ? [
                 ...column.issues, {
-                    id: crypto.randomUUID(),
+                    id: uuid(),
                     name,
                     description: "This task has no description"
                     }

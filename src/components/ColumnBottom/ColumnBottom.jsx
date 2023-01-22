@@ -11,10 +11,9 @@ const ColumnBottom = ({ column, previousColumn, createIssue, replaceIssue}) => {
     const [issueNameValue, setIssueNameValue] = useState('')
     const isBacklog = column.title === 'Backlog'
     const [selectedIssue, setSelectedIssue] = useState(!isBacklog ? previousColumn.issues[0] : undefined);
-
     useEffect(() => {
-        if (!isBacklog) {
-            setSelectedIssue(previousColumn.issues[0])
+        if (!isBacklog && !selectedIssue) {
+            setSelectedIssue(previousColumn?.issues[0])
         }
     }, [isBacklog, previousColumn.issues, selectedIssue]);
 
@@ -34,12 +33,13 @@ const ColumnBottom = ({ column, previousColumn, createIssue, replaceIssue}) => {
                 setButtonName(buttonNames.add);
                 setIssueNameValue('');
                 break;
-            case buttonClickTypes.replaceIssue:
+            case buttonClickTypes.replaceIssue:{
                 replaceIssue(previousColumn.title, column.title, selectedIssue)
-                setSelectedIssue(previousColumn.issues.filter(({ id }) => id !== selectedIssue?.id)[0]);
-
+                setSelectedIssue(previousColumn.issues.find(({ id }) => id !== selectedIssue?.id));
                 setButtonName(buttonNames.add);
                 break;
+            }
+                
         
             default:
                 setButtonName(buttonNames.add);
